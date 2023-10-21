@@ -10,6 +10,16 @@ type directionService interface {
 	calculateDirection() int
 }
 
+var _ etaService = Driving{}
+var _ etaService = BICYCLING{}
+var _ etaService = TRANSIT{}
+var _ etaService = WALKING{}
+
+var _ directionService = Driving{}
+var _ directionService = BICYCLING{}
+var _ directionService = TRANSIT{}
+var _ directionService = WALKING{}
+
 type Driving struct {
 }
 

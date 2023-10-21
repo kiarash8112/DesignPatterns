@@ -13,7 +13,8 @@ func (p *ProductCollection) add(product Product) {
 	p.products = append(p.products, product)
 }
 
-//if type of products changed only this file need change not main one
+// if type of products changed only this file need change not main one
+var _ iterator = &ProductIterator{}
 
 type iterator interface {
 	next()
